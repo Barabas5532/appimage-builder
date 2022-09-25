@@ -29,6 +29,7 @@ RUN wget https://github.com/NixOS/patchelf/releases/download/0.12/patchelf-0.12.
     tar -xvf patchelf-0.12.tar.bz2;  \
     cd patchelf-0.12.20200827.8d3a16e; \
     ./configure && make && make install; \
+    cd -; \
     rm -rf patchelf-*
 
 ADD . /opt/appimage-builder
